@@ -1,0 +1,11 @@
+---
+- name: Play that has other and inner loops
+  hosts: localhost
+  tasks:
+    - include_tasks: tasks/loop_task.yaml
+      loop:
+        - susan
+        - joe
+        - james
+      loop_control:
+        loop_var: other_info
